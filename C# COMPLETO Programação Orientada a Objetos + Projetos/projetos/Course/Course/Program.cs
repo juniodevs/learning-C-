@@ -5,27 +5,38 @@ namespace Course
     internal class Program {
         static void Main(string[] args) {
 
+            int a = 10;
+            Console.WriteLine(a);
+            a += 2;
+            Console.WriteLine(a);
+            a *= 3;
+            Console.WriteLine(a);
+            string s = "ABC";
+            Console.WriteLine(s);
+            s += "DEF";
+            Console.WriteLine(s);
+            a++;
+            Console.WriteLine(a);
+            a--;
+            Console.WriteLine(a);
+            int b = ++a;
+            Console.WriteLine(b);
 
-            string produto1 = "Computador";
-            string produto2 = "Mesa de escritório";
-
-            byte idade = 30;
-            int codigo = 5290;
-            char genero = 'M';
-
-            double preco1 = 2100.0;
-            double preco2 = 650.50;
-            double medida = 53.234567;
-
-            Console.WriteLine("Produtos:");
-            Console.WriteLine($"{produto1}, cujo preço é ${preco1}");
-            Console.WriteLine($"{produto2}, cujo preco é ${preco2.ToString("F2")}");
-            Console.WriteLine($"\nRegistro: {idade}, codigo {codigo}, e gênero: {genero}\n");
-            Console.WriteLine($"Medida com oito casa decimais: {medida.ToString("F8")}");
-            Console.WriteLine($"Arredondando (três casa decimais): {medida.ToString("F3")}");
-            Console.WriteLine($"Separado por deciam ivariant culture: {medida.ToString("F3", CultureInfo.InvariantCulture)}");
-
-
+            //string produto1 = "Computador";
+            //string produto2 = "Mesa de escritório";
+            //byte idade = 30;
+            //int codigo = 5290;
+            //char genero = 'M';
+            //double preco1 = 2100.0;
+            //double preco2 = 650.50;
+            //double medida = 53.234567;
+            //Console.WriteLine("Produtos:");
+            //Console.WriteLine($"{produto1}, cujo preço é ${preco1}");
+            //Console.WriteLine($"{produto2}, cujo preco é ${preco2.ToString("F2")}");
+            //Console.WriteLine($"\nRegistro: {idade}, codigo {codigo}, e gênero: {genero}\n");
+            //Console.WriteLine($"Medida com oito casa decimais: {medida.ToString("F8")}");
+            //Console.WriteLine($"Arredondando (três casa decimais): {medida.ToString("F3")}");
+            //Console.WriteLine($"Separado por deciam ivariant culture: {medida.ToString("F3", CultureInfo.InvariantCulture)}");
             //char genero = 'F';
             //int idade = 32;
             //double saldo = 10.35784;
