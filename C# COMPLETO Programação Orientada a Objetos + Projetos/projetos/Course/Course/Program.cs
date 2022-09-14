@@ -5,22 +5,41 @@ namespace Course
     internal class Program {
         static void Main(string[] args) {
 
-            int a = 10;
-            Console.WriteLine(a);
-            a += 2;
-            Console.WriteLine(a);
-            a *= 3;
-            Console.WriteLine(a);
-            string s = "ABC";
-            Console.WriteLine(s);
-            s += "DEF";
-            Console.WriteLine(s);
-            a++;
-            Console.WriteLine(a);
-            a--;
-            Console.WriteLine(a);
-            int b = ++a;
+            float x = 4.5f;
+            double y = x;
+            Console.WriteLine(y);
+
+            double a = 5.1;
+            float b;
+            b = (float)a;
             Console.WriteLine(b);
+
+            int c = (int)a;
+            Console.WriteLine(c);
+
+            int d = 5;
+            int e = 2;
+
+            double resultado = (double)d / e;
+
+            Console.WriteLine(resultado);
+
+            //int a = 10;
+            //Console.WriteLine(a);
+            //a += 2;
+            //Console.WriteLine(a);
+            //a *= 3;
+            //Console.WriteLine(a);
+            //string s = "ABC";
+            //Console.WriteLine(s);
+            //s += "DEF";
+            //Console.WriteLine(s);
+            //a++;
+            //Console.WriteLine(a);
+            //a--;
+            //Console.WriteLine(a);
+            //int b = ++a;
+            //Console.WriteLine(b);
 
             //string produto1 = "Computador";
             //string produto2 = "Mesa de escritório";
