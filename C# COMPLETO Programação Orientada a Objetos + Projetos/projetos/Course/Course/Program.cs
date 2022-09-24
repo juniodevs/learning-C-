@@ -6,26 +6,49 @@ namespace Course
         static void Main(string[] args) {
 
 
-            Console.WriteLine("Entre com seu nome completo: ");
-            string nome = Console.ReadLine();
-            Console.WriteLine("Quantos quartos tem na sua casa?");
-            int quartos = int.Parse(Console.ReadLine());
-            Console.WriteLine("Entre com o preço de um produto:");
-            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.WriteLine("Entre seu ultimo nome, idade e altura (mesma linha)");
+            int a = 10;
 
-            string[] vet = Console.ReadLine().Split(' ');
+            bool c1 = a < 10;
+            bool c2 = a < 20;
+            bool c3 = a > 10;
+            bool c4 = a > 5;
+            
+            Console.WriteLine(c1);
+            Console.WriteLine(c2);
+            Console.WriteLine(c3);
+            Console.WriteLine(c4);
+            Console.WriteLine("--------------");
 
-            string nome2 = vet[0];
-            int idade2 = int.Parse(vet[1]);
-            double altura2 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+            bool c5 = a <= 10;
+            bool c6 = a >= 10;
+            bool c7 = a == 10;
+            bool c8 = a != 10;
 
-            Console.WriteLine(nome);
-            Console.WriteLine(quartos);
-            Console.WriteLine(preco.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine(nome2);
-            Console.WriteLine(idade2);
-            Console.WriteLine(altura2.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine(c5);
+            Console.WriteLine(c6);
+            Console.WriteLine(c7);
+            Console.WriteLine(c8);
+
+            //Console.WriteLine("Entre com seu nome completo: ");
+            //string nome = Console.ReadLine();
+            //Console.WriteLine("Quantos quartos tem na sua casa?");
+            //int quartos = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Entre com o preço de um produto:");
+            //double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //Console.WriteLine("Entre seu ultimo nome, idade e altura (mesma linha)");
+
+            //string[] vet = Console.ReadLine().Split(' ');
+
+            //string nome2 = vet[0];
+            //int idade2 = int.Parse(vet[1]);
+            //double altura2 = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+            //Console.WriteLine(nome);
+            //Console.WriteLine(quartos);
+            //Console.WriteLine(preco.ToString("F2", CultureInfo.InvariantCulture));
+            //Console.WriteLine(nome2);
+            //Console.WriteLine(idade2);
+            //Console.WriteLine(altura2.ToString("F2", CultureInfo.InvariantCulture));
 
             //int n1 = int.Parse(Console.ReadLine());
             //char ch = char.Parse(Console.ReadLine());
