@@ -6,21 +6,56 @@ namespace Course
         static void Main(string[] args) {
 
 
-            bool c1 = 2 > 3 && 4 != 5;
-            bool c2 = 2 > 3 || 4 != 5; // true
-            bool c3 = !(2 > 3) && 4 != 5; // true
+            Console.WriteLine("Digite o Horário");
 
-            Console.WriteLine(c1);
-            Console.WriteLine(c2);
-            Console.WriteLine(c3);
+            int horario = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("-----");
+            if (horario < 12) {
+                Console.WriteLine("Bom Dia!");
+            }
+            else if (12 <= horario && horario < 18) {
+                Console.WriteLine("Boa Tarde!");
+            }
+            else if (horario >= 18) {
+                Console.WriteLine("Boa Noite!");
+            }
 
-            bool c4 = 10 < 5; // false
-            bool c5 = c2 || c3 && c4;
 
-            Console.WriteLine(c5);
+            Console.WriteLine("Digite um Número");
+            int a = int.Parse(Console.ReadLine());
+            if(a % 2 == 0) {
+                Console.WriteLine(a + " É um Número Par");
+            }
+            else {
+                Console.WriteLine("É um Número Impar");
+            }
 
+            int x = 10;
+
+            Console.WriteLine("Bom Dia!");
+
+            if (x > 5) {
+                Console.WriteLine("Boa Tarde!");
+            }
+
+            Console.WriteLine("Boa Noite!");
+
+
+
+            //bool c1 = 2 > 3 && 4 != 5;
+            //bool c2 = 2 > 3 || 4 != 5; // true
+            //bool c3 = !(2 > 3) && 4 != 5; // true
+
+            //Console.WriteLine(c1);
+            //Console.WriteLine(c2);
+            //Console.WriteLine(c3);
+
+            //Console.WriteLine("-----");
+
+            //bool c4 = 10 < 5; // false
+            //bool c5 = c2 || c3 && c4;
+
+            //Console.WriteLine(c5);
 
             //int a = 10;
             //bool c1 = a < 10;
