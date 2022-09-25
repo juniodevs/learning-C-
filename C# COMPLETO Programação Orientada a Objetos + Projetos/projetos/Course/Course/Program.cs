@@ -5,43 +5,42 @@ namespace Course
     internal class Program {
         static void Main(string[] args) {
 
+            double preco = double.Parse(Console.ReadLine());
+            double desconto = 0.0;
 
-            Console.WriteLine("Digite o Horário");
-
-            int horario = int.Parse(Console.ReadLine());
-
-            if (horario < 12) {
-                Console.WriteLine("Bom Dia!");
-            }
-            else if (12 <= horario && horario < 18) {
-                Console.WriteLine("Boa Tarde!");
-            }
-            else if (horario >= 18) {
-                Console.WriteLine("Boa Noite!");
+            if (preco > 100.0) {
+                desconto = preco * 0.1;
             }
 
 
-            Console.WriteLine("Digite um Número");
-            int a = int.Parse(Console.ReadLine());
-            if(a % 2 == 0) {
-                Console.WriteLine(a + " É um Número Par");
-            }
-            else {
-                Console.WriteLine("É um Número Impar");
-            }
-
-            int x = 10;
-
-            Console.WriteLine("Bom Dia!");
-
-            if (x > 5) {
-                Console.WriteLine("Boa Tarde!");
-            }
-
-            Console.WriteLine("Boa Noite!");
+            Console.WriteLine(desconto);
 
 
-
+            //Console.WriteLine("Digite o Horário");
+            //int horario = int.Parse(Console.ReadLine());
+            //if (horario < 12) {
+            //    Console.WriteLine("Bom Dia!");
+            //}
+            //else if (12 <= horario && horario < 18) {
+            //    Console.WriteLine("Boa Tarde!");
+            //}
+            //else if (horario >= 18) {
+            //    Console.WriteLine("Boa Noite!");
+            //}
+            //Console.WriteLine("Digite um Número");
+            //int a = int.Parse(Console.ReadLine());
+            //if(a % 2 == 0) {
+            //    Console.WriteLine(a + " É um Número Par");
+            //}
+            //else {
+            //    Console.WriteLine("É um Número Impar");
+            //}
+            //int x = 10;
+            //Console.WriteLine("Bom Dia!");
+            //if (x > 5) {
+            //    Console.WriteLine("Boa Tarde!");
+            //}
+            //Console.WriteLine("Boa Noite!");
             //bool c1 = 2 > 3 && 4 != 5;
             //bool c2 = 2 > 3 || 4 != 5; // true
             //bool c3 = !(2 > 3) && 4 != 5; // true
