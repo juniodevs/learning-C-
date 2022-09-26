@@ -6,14 +6,28 @@ namespace Course
         static void Main(string[] args) {
 
             Console.WriteLine("Digite 3 Números");
+            Console.Write("Digite um Número: ");
+            double x = double.Parse(Console.ReadLine());
+            double raiz = 0;
 
-            int n1 = int.Parse(Console.ReadLine());
-            int n2 = int.Parse(Console.ReadLine());
-            int n3 = int.Parse(Console.ReadLine());
-            double resultado = Maior(n1, n2, n3);
-            Console.WriteLine("Maior é " + resultado);
-            resultado = Maior(3, 5, 7);
-            Console.WriteLine("Maior é " + resultado);
+            while (x >= 0) {
+            raiz = Math.Sqrt(x);
+            Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+            Console.Write("Digite um Número: ");
+            x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+
+            Console.WriteLine("Número Negativo");
+
+            //Console.WriteLine("Digite 3 Números");
+
+            //int n1 = int.Parse(Console.ReadLine());
+            //int n2 = int.Parse(Console.ReadLine());
+            //int n3 = int.Parse(Console.ReadLine());
+            //double resultado = Maior(n1, n2, n3);
+            //Console.WriteLine("Maior é " + resultado);
+            //resultado = Maior(3, 5, 7);
+            //Console.WriteLine("Maior é " + resultado);
 
             //double preco = double.Parse(Console.ReadLine());
             //double desconto = 0.0;
@@ -272,13 +286,13 @@ namespace Course
             //Console.WriteLine(num4);
         }
 
-        static int Maior(int n1, int n2, int n3) {
-            if (n1 > n2 && n1 > n3)
-                return n1;
-            else if (n2 > n3)
-                return n2;
-            else
-                return n3;
-        }
+        //static int Maior(int n1, int n2, int n3) {
+        //    if (n1 > n2 && n1 > n3)
+        //        return n1;
+        //    else if (n2 > n3)
+        //        return n2;
+        //    else
+        //        return n3;
+        //}
     }
 }
