@@ -2,20 +2,26 @@
 using System.Globalization;
 namespace Course
 {
-    internal class Program {
+    class Program {
         static void Main(string[] args) {
 
-            double preco = double.Parse(Console.ReadLine());
-            double desconto = 0.0;
+            Console.WriteLine("Digite 3 Números");
 
-            if (preco > 100.0) {
-                desconto = preco * 0.1;
-            }
+            int n1 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
+            int n3 = int.Parse(Console.ReadLine());
+            double resultado = Maior(n1, n2, n3);
+            Console.WriteLine("Maior é " + resultado);
+            resultado = Maior(3, 5, 7);
+            Console.WriteLine("Maior é " + resultado);
 
+            //double preco = double.Parse(Console.ReadLine());
+            //double desconto = 0.0;
 
-            Console.WriteLine(desconto);
-
-
+            //if (preco > 100.0) {
+            //    desconto = preco * 0.1;
+            //}
+            //Console.WriteLine(desconto);
             //Console.WriteLine("Digite o Horário");
             //int horario = int.Parse(Console.ReadLine());
             //if (horario < 12) {
@@ -264,6 +270,15 @@ namespace Course
             //Console.WriteLine(num2);
             //Console.WriteLine(num3);
             //Console.WriteLine(num4);
+        }
+
+        static int Maior(int n1, int n2, int n3) {
+            if (n1 > n2 && n1 > n3)
+                return n1;
+            else if (n2 > n3)
+                return n2;
+            else
+                return n3;
         }
     }
 }
