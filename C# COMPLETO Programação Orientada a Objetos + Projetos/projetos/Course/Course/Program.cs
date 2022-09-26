@@ -5,7 +5,6 @@ namespace Course
     class Program {
         static void Main(string[] args) {
 
-            Console.WriteLine("Digite 3 Números");
             Console.Write("Digite um Número: ");
             double x = double.Parse(Console.ReadLine());
             double raiz = 0;
