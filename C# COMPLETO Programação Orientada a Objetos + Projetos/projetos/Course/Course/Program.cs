@@ -1,22 +1,39 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.Serialization;
+
 namespace Course
 {
     class Program {
         static void Main(string[] args) {
 
-            Console.Write("Digite um Número: ");
-            double x = double.Parse(Console.ReadLine());
-            double raiz = 0;
+            Console.Write("Digite Quantos Números inteiros você vai digitar: ");
+            int num = int.Parse(Console.ReadLine());
+            int soma = 0;
+            int resultado = 0;
 
-            while (x >= 0) {
-            raiz = Math.Sqrt(x);
-            Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
-            Console.Write("Digite um Número: ");
-            x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            for (int i = 1; i <= num; i++) {
+                Console.Write("Valor : #{0} ", i);
+                soma = int.Parse(Console.ReadLine());
+                resultado += soma;
             }
 
-            Console.WriteLine("Número Negativo");
+            Console.WriteLine("Soma = " + resultado);
+
+
+
+            //Console.Write("Digite um Número: ");
+            //double x = double.Parse(Console.ReadLine());
+            //double raiz = 0;
+
+            //while (x >= 0) {
+            //raiz = Math.Sqrt(x);
+            //Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+            //Console.Write("Digite um Número: ");
+            //x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            //}
+
+            //Console.WriteLine("Número Negativo");
 
             //Console.WriteLine("Digite 3 Números");
 
