@@ -18,8 +18,6 @@ namespace Course {
 
         }
 
-
-
         //    Triangulo x, y;
 
         //    x = new Triangulo();
