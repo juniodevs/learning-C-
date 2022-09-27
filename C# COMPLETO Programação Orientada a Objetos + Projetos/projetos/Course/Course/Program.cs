@@ -16,6 +16,19 @@ namespace Course {
 
             Console.WriteLine("Dados do Produto: " + p);
 
+            Console.Write("\nDigite o número de produtos a ser adicionado: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+            Console.WriteLine("Dados Atualizados: " + p);
+
+            Console.Write("\nDigite o número de produtos a ser Removidos: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine("Dados Atualizados: " + p);
+
+
+
+
         }
 
         //    Triangulo x, y;

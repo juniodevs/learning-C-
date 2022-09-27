@@ -11,6 +11,14 @@ namespace Course {
             return preco * quantidade;
         }
 
+        public void AdicionarProdutos(int quantidade) {
+            this.quantidade += quantidade;
+        }
+
+        public void RemoverProdutos(int quantidade) {
+            this.quantidade -= quantidade;
+        }
+
         public override string ToString() {
             return Nome
                 + ", $ "
@@ -19,7 +27,6 @@ namespace Course {
                 + quantidade
                 + " unidades, Total: $ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
-
         }
 
     }
