@@ -2,34 +2,52 @@
 
 namespace Course {
     class Program {
+
+        static double Pi = 3.14;
         static void Main(string[] args) {
+            Console.WriteLine("Entre o Valor do raio: ");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Produto p = new Produto();
+            double circ = Circunferencia(raio);
 
-            Console.WriteLine("Entre os dados do produto: ");
-            Console.Write("Nome: ");
-            p.Nome = Console.ReadLine();
-            Console.Write("Preço: ");
-            p.preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no estoque: ");
-            p.quantidade = int.Parse(Console.ReadLine());
+            Console.WriteLine("Cincunferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
 
-            Console.WriteLine("Dados do Produto: " + p);
+            double volume = Volume(raio);
 
-            Console.Write("\nDigite o número de produtos a ser adicionado: ");
-            int qte = int.Parse(Console.ReadLine());
-            p.AdicionarProdutos(qte);
-            Console.WriteLine("Dados Atualizados: " + p);
-
-            Console.Write("\nDigite o número de produtos a ser Removidos: ");
-            qte = int.Parse(Console.ReadLine());
-            p.RemoverProdutos(qte);
-            Console.WriteLine("Dados Atualizados: " + p);
-
-
-
-
+            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de Pi: " + Pi.ToString("F2", CultureInfo.InvariantCulture));
         }
+
+        static double Circunferencia(double r) {
+            return 2.0 * Pi * r;
+        }
+        static double Volume (double r) {
+
+            return 4 / 3 * Pi * Math.Pow(r, 3);
+        }
+
+
+        //Produto p = new Produto();
+
+        //Console.WriteLine("Entre os dados do produto: ");
+        //Console.Write("Nome: ");
+        //p.Nome = Console.ReadLine();
+        //Console.Write("Preço: ");
+        //p.preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        //Console.Write("Quantidade no estoque: ");
+        //p.quantidade = int.Parse(Console.ReadLine());
+
+        //Console.WriteLine("Dados do Produto: " + p);
+
+        //Console.Write("\nDigite o número de produtos a ser adicionado: ");
+        //int qte = int.Parse(Console.ReadLine());
+        //p.AdicionarProdutos(qte);
+        //Console.WriteLine("Dados Atualizados: " + p);
+
+        //Console.Write("\nDigite o número de produtos a ser Removidos: ");
+        //qte = int.Parse(Console.ReadLine());
+        //p.RemoverProdutos(qte);
+        //Console.WriteLine("Dados Atualizados: " + p);
 
         //    Triangulo x, y;
 
