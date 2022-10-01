@@ -2,30 +2,24 @@
 
 namespace Course {
     class Program {
-
-        static double Pi = 3.14;
+        
         static void Main(string[] args) {
+
+
             Console.WriteLine("Entre o Valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double circ = Circunferencia(raio);
+            double circ = Calculadora.Circunferencia(raio);
 
             Console.WriteLine("Cincunferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
 
-            double volume = Volume(raio);
+            double volume = Calculadora.Volume(raio);
 
             Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de Pi: " + Pi.ToString("F2", CultureInfo.InvariantCulture));
-        }
+            Console.WriteLine("Valor de Pi: " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
 
-        static double Circunferencia(double r) {
-            return 2.0 * Pi * r;
         }
-        static double Volume (double r) {
-
-            return 4 / 3 * Pi * Math.Pow(r, 3);
         }
-
 
         //Produto p = new Produto();
 
@@ -382,4 +376,3 @@ namespace Course {
         //        return n3;
         //}
     }
-}
