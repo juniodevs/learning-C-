@@ -14,6 +14,12 @@ namespace Course {
 
         }
 
+        public Produto(string nome, double preco) {
+            Nome = nome;
+            this.preco = preco;
+            quantidade = 5;
+        }
+
 
         public double ValorTotalEmEstoque() {
 
