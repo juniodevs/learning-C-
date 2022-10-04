@@ -6,12 +6,18 @@ namespace Course {
         public double preco;
         public int quantidade;
 
-        public Produto(string nome, double preco) {
+        public Produto() {
+            quantidade = 10;
+        }
+
+        public Produto(string nome, double preco) : this() {
             Nome = nome;
             this.preco = preco;
         }
 
-
+        public Produto(string nome, double preco, int quantidade) : this() {
+            this.quantidade = quantidade;
+        }
 
         //public Produto(string nome, double preco, int quantidade) {
 
@@ -21,9 +27,6 @@ namespace Course {
 
         //}
 
-        public Produto() {
-
-        }
 
         //public Produto(string nome, double preco) {
         //    Nome = nome;
