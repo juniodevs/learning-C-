@@ -6,19 +6,30 @@ namespace Course {
         public double preco;
         public int quantidade;
 
-        public Produto(string nome, double preco, int quantidade) {
-
-            Nome = nome;
-            this.preco = preco;
-            this.quantidade = quantidade;
-
-        }
-
         public Produto(string nome, double preco) {
             Nome = nome;
             this.preco = preco;
-            quantidade = 5;
         }
+
+
+
+        //public Produto(string nome, double preco, int quantidade) {
+
+        //    Nome = nome;
+        //    this.preco = preco;
+        //    this.quantidade = quantidade;
+
+        //}
+
+        public Produto() {
+
+        }
+
+        //public Produto(string nome, double preco) {
+        //    Nome = nome;
+        //    this.preco = preco;
+        //    quantidade = 5;
+        //}
 
 
         public double ValorTotalEmEstoque() {

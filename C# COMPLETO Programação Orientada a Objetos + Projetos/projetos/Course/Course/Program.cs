@@ -12,7 +12,12 @@ namespace Course {
             //Console.Write("Quantidade no estoque: ");
             //int quantidade = int.Parse(Console.ReadLine());
 
-            Produto p = new Produto(nome, preco);
+            Produto p2 = new Produto();
+
+            Produto p3 = new Produto()
+            { Nome = "TV",
+                preco = 500.0,
+                quantidade = 0 };
 
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p);
