@@ -6,35 +6,26 @@ namespace Course {
         private double _preco;
         private int _quantidade;
 
-        public Produto() {
-            _quantidade = 10;
-        }
-
-        public Produto(string nome, double preco) : this() {
+        public Produto(string nome, double preco, int quantidade) {
             _nome = nome;
-            this._preco = preco;
+            _preco = preco;
+            _quantidade = quantidade;
         }
 
-        public Produto(string nome, double preco, int quantidade) : this() {
-            this._quantidade = quantidade;
+        public string Nome {
+            get { return _nome; }
+            set {
+                if (value != null && value.Length > 1)
+                    this._nome = value;
+            }
         }
 
-        public string GetNome() {
-            return _nome;
+        public double Preco {
+            get { return _preco; }
         }
 
-        public void SetNome(string nome) {
-
-            if (nome != null && nome.Length > 1)
-            this._nome = nome;
-        }
-
-        public double GetPreco() {
-            return _preco;
-        }
-
-        public int GetQuantidade() {
-            return _quantidade;
+        public int Quantidade {
+            get { return _quantidade; }
         }
 
         //public Produto(string nome, double preco, int quantidade) {
