@@ -4,35 +4,44 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            //double? x = null;
-            //double? y = 10.0;
-
-            //Console.WriteLine(x.GetValueOrDefault());
-            //Console.WriteLine(y.GetValueOrDefault());
-
-            //Console.WriteLine(x.HasValue);
-            //Console.WriteLine(y.HasValue);
-
-            //if (x.HasValue)
-            //Console.WriteLine(x.Value); //erro (precisa ter um valor)
-            //else
-            //    Console.WriteLine("X is Null");
-            //if (y.HasValue)
-            //Console.WriteLine(y.Value);
-            //else
-            //    Console.WriteLine("y is Null");
-
-            double? x = null;
-            double? y = 10;
-
-            double a = x ?? 5;
-            double b = y ?? 5;
-
-            Console.WriteLine(a + " " + b);
-
+            int n = int.Parse(Console.ReadLine());
+            double media = 0;
+            double[] vect = new double[n];
+            for (int i = 0; i < vect.Length; i++) {
+                vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                media+=vect[i];
+            }
+            media = media / vect.Length;
+            Console.WriteLine("AVERANGE HEIGHT = " + media.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
+
+//double? x = null;
+//double? y = 10.0;
+
+//Console.WriteLine(x.GetValueOrDefault());
+//Console.WriteLine(y.GetValueOrDefault());
+
+//Console.WriteLine(x.HasValue);
+//Console.WriteLine(y.HasValue);
+
+//if (x.HasValue)
+//Console.WriteLine(x.Value); //erro (precisa ter um valor)
+//else
+//    Console.WriteLine("X is Null");
+//if (y.HasValue)
+//Console.WriteLine(y.Value);
+//else
+//    Console.WriteLine("y is Null");
+
+//double? x = null;
+//double? y = 10;
+
+//double a = x ?? 5;
+//double b = y ?? 5;
+
+//Console.WriteLine(a + " " + b);
 
 //Point p;
 //p.X = 10;
