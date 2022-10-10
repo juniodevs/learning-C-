@@ -1,27 +1,32 @@
 ﻿using System.Globalization;
+using System.Net.WebSockets;
 
 namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            int n = int.Parse(Console.ReadLine());
-            double media = 0;
-            ProdutoComVetor[] Produto = new ProdutoComVetor[n];
-            for (int i = 0; i < Produto.Length; i++) {
-                string nome = Console.ReadLine();
-                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-                Produto[i] = new ProdutoComVetor { Name = nome, Price = price };
-
-                media += Produto[i].Price;
-            }
-            media = media / Produto.Length;
-            Console.WriteLine("AVARANGE PRICE = " + media.ToString("F2", CultureInfo.InvariantCulture));
-
+            int s1 = Calculator2.Sum(1, 20, 30, 10, 50);
+            Console.WriteLine(s1);
+            Console.WriteLine(Calculator2.Sum(10, 9, 10, 90, 20, 100, 10, 2, 09, 3, 4, 5));
 
         }
     }
 }
+
+
+//int n = int.Parse(Console.ReadLine());
+//double media = 0;
+//ProdutoComVetor[] Produto = new ProdutoComVetor[n];
+//for (int i = 0; i < Produto.Length; i++) {
+//    string nome = Console.ReadLine();
+//    double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//    Produto[i] = new ProdutoComVetor { Name = nome, Price = price };
+
+//    media += Produto[i].Price;
+//}
+//media = media / Produto.Length;
+//Console.WriteLine("AVARANGE PRICE = " + media.ToString("F2", CultureInfo.InvariantCulture));
 //int n = int.Parse(Console.ReadLine());
 //double media = 0;
 //double[] vect = new double[n];
