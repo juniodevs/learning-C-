@@ -3,15 +3,43 @@
 namespace Course {
     class Program {
         static void Main(string[] args) {
-            Point p;
-            p.X = 10;
-            p.Y = 20;
-            Console.WriteLine(p);
-            p = new Point();
-            Console.WriteLine(p);
+
+            //double? x = null;
+            //double? y = 10.0;
+
+            //Console.WriteLine(x.GetValueOrDefault());
+            //Console.WriteLine(y.GetValueOrDefault());
+
+            //Console.WriteLine(x.HasValue);
+            //Console.WriteLine(y.HasValue);
+
+            //if (x.HasValue)
+            //Console.WriteLine(x.Value); //erro (precisa ter um valor)
+            //else
+            //    Console.WriteLine("X is Null");
+            //if (y.HasValue)
+            //Console.WriteLine(y.Value);
+            //else
+            //    Console.WriteLine("y is Null");
+
+            double? x = null;
+            double? y = 10;
+
+            double a = x ?? 5;
+            double b = y ?? 5;
+
+            Console.WriteLine(a + " " + b);
+
         }
     }
 }
+
+//Point p;
+//p.X = 10;
+//p.Y = 20;
+//Console.WriteLine(p);
+//p = new Point();
+//Console.WriteLine(p);
 
 //Produto p = new Produto("TV", 500.00, 10);
 //p.Nome = "TV 4K";
