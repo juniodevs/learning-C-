@@ -6,16 +6,32 @@ namespace Course {
 
             int n = int.Parse(Console.ReadLine());
             double media = 0;
-            double[] vect = new double[n];
-            for (int i = 0; i < vect.Length; i++) {
-                vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                media+=vect[i];
+            ProdutoComVetor[] Produto = new ProdutoComVetor[n];
+            for (int i = 0; i < Produto.Length; i++) {
+                string nome = Console.ReadLine();
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Produto[i] = new ProdutoComVetor { Name = nome, Price = price };
+
+                media += Produto[i].Price;
             }
-            media = media / vect.Length;
-            Console.WriteLine("AVERANGE HEIGHT = " + media.ToString("F2", CultureInfo.InvariantCulture));
+            media = media / Produto.Length;
+            Console.WriteLine("AVARANGE PRICE = " + media.ToString("F2", CultureInfo.InvariantCulture));
+
+
         }
     }
 }
+//int n = int.Parse(Console.ReadLine());
+//double media = 0;
+//double[] vect = new double[n];
+//for (int i = 0; i < vect.Length; i++) {
+//    vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//    media+=vect[i];
+//}
+//media = media / vect.Length;
+//Console.WriteLine("AVERANGE HEIGHT = " + media.ToString("F2", CultureInfo.InvariantCulture));
+
 
 //double? x = null;
 //double? y = 10.0;
