@@ -11,6 +11,7 @@ namespace Course {
             Quantidade = quantidade;
         }
 
+
         public string Nome {
             get { return _nome; }
             set {
