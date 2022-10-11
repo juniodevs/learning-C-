@@ -5,13 +5,22 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            int s1 = Calculator2.Sum(1, 20, 30, 10, 50);
-            Console.WriteLine(s1);
-            Console.WriteLine(Calculator2.Sum(10, 9, 10, 90, 20, 100, 10, 2, 09, 3, 4, 5));
+            int a = 10;
+            Calculator2.Triple(ref a);
+            Console.WriteLine(a);
+
+            int b = 10;
+            int triple;
+            Calculator2.Triple2(b, out triple);
+            Console.WriteLine(triple);
 
         }
     }
 }
+
+//int s1 = Calculator2.Sum(1, 20, 30, 10, 50);
+//Console.WriteLine(s1);
+//Console.WriteLine(Calculator2.Sum(10, 9, 10, 90, 20, 100, 10, 2, 09, 3, 4, 5));
 
 
 //int n = int.Parse(Console.ReadLine());
