@@ -1,26 +1,29 @@
-﻿using System.Globalization;
+﻿using System.Collections;
+using System.Globalization;
 using System.Net.WebSockets;
 
 namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            string[] vect = new string[] { "Maria", "Bob", "Alex" };
-
-            for (int i = 0; i < vect.Length; i++) {
-                Console.WriteLine(vect[i]);
-            }
-
-            Console.WriteLine("------------------------");
-
-            foreach (string v in vect) {
-                Console.WriteLine(v);
-            }
-
+            List<string> list = new List<string>();
+            List<string> list2 = new List<string> { "Maria", "Alex" };
 
         }
     }
 }
+
+//string[] vect = new string[] { "Maria", "Bob", "Alex" };
+
+//for (int i = 0; i < vect.Length; i++) {
+//    Console.WriteLine(vect[i]);
+//}
+
+//Console.WriteLine("------------------------");
+
+//foreach (string v in vect) {
+//    Console.WriteLine(v);
+//}
 
 //int a = 10;
 //Calculator2.Triple(ref a);
