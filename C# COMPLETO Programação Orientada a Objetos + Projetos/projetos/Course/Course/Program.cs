@@ -1,13 +1,66 @@
 ﻿using System.Collections;
 using System.Globalization;
-using System.Net.WebSockets;
 
 namespace Course {
     class Program {
         static void Main(string[] args) {
 
             List<string> list = new List<string>();
-            List<string> list2 = new List<string> { "Maria", "Alex" };
+
+            list.Add("Maria");
+            list.Add("Bob");
+            list.Add("Ana");
+            list.Add("Amanda");
+            list.Insert(2, "Marcos");
+
+            foreach (string l in list) {
+                Console.WriteLine(l);
+            }
+
+            Console.WriteLine("List Count: " + list.Count);
+            string s1 = list.Find(x => x[0] == 'A');
+            Console.WriteLine("First 'A': " + s1);
+
+            string s2 = list.Last(x => x[0] == 'A');
+            Console.WriteLine("Last 'A': " + s2);
+
+            int pos1 = list.FindIndex(x => x[0] == 'A');
+            Console.WriteLine("First position " + pos1);
+
+            int pos2 = list.FindLastIndex(x => x[0] == 'A');
+            Console.WriteLine("Last position " + pos2);
+
+            List<string> list2 = list.FindAll(x => x.Length == 5);
+
+            Console.WriteLine("------------------------------");
+
+            foreach(string obj in list2) {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine("------------------------------");
+
+
+            list.RemoveAt(3);
+            list.Remove("Ana");
+
+            foreach (string obj in list) {
+                Console.WriteLine(obj);
+            }
+
+            list.RemoveAll(x => x[0] == 'M');
+
+            Console.WriteLine("----------------------------------");
+            foreach (string obj in list) {
+                Console.WriteLine(obj);
+            }
+
+            list.RemoveRange(0, 2);
+
+            Console.WriteLine("----------------------------------");
+            foreach (string obj in list) {
+                Console.WriteLine(obj);
+            }
 
         }
     }
