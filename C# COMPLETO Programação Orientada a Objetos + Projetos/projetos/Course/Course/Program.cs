@@ -5,18 +5,31 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            int a = 10;
-            Calculator2.Triple(ref a);
-            Console.WriteLine(a);
+            string[] vect = new string[] { "Maria", "Bob", "Alex" };
 
-            int b = 10;
-            int triple;
-            Calculator2.Triple2(b, out triple);
-            Console.WriteLine(triple);
+            for (int i = 0; i < vect.Length; i++) {
+                Console.WriteLine(vect[i]);
+            }
+
+            Console.WriteLine("------------------------");
+
+            foreach (string v in vect) {
+                Console.WriteLine(v);
+            }
+
 
         }
     }
 }
+
+//int a = 10;
+//Calculator2.Triple(ref a);
+//Console.WriteLine(a);
+
+//int b = 10;
+//int triple;
+//Calculator2.Triple2(b, out triple);
+//Console.WriteLine(triple);
 
 //int s1 = Calculator2.Sum(1, 20, 30, 10, 50);
 //Console.WriteLine(s1);
