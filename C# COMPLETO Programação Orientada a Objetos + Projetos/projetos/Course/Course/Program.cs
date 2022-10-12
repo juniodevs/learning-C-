@@ -5,19 +5,42 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            double[,] mat = new double[2, 3];
+            int N = int.Parse(Console.ReadLine());
+            int negativos = 0;
 
-            Console.WriteLine(mat.Length);
+            int[,] mat = new int[N,N];
 
-            Console.WriteLine(mat.Rank);
+            for (int i = 0; i < N; i++) {
 
-            Console.WriteLine(mat.GetLength(0));
+                string[] values = Console.ReadLine().Split(' ');
+                for (int j = 0; j < N; j++) {
+                    mat[i, j] = int.Parse(values[j]);
+                    if (mat[i,j] < 0) {
+                        negativos++;
+                    }
+                }
+            }
 
-            Console.WriteLine(mat.GetLength(1));
+            Console.WriteLine("Main Diagonal: ");
 
+            for (int i = 0; i < N; i++) {
+                Console.Write(mat[i,i] + " ");
+            }
+            Console.WriteLine("\nNegative numbers: " + negativos);
         }
     }
 }
+
+//double[,] mat = new double[2, 3];
+
+//Console.WriteLine(mat.Length);
+
+//Console.WriteLine(mat.Rank);
+
+//Console.WriteLine(mat.GetLength(0));
+
+//Console.WriteLine(mat.GetLength(1));
+
 //List<string> list = new List<string>();
 
 //list.Add("Maria");
