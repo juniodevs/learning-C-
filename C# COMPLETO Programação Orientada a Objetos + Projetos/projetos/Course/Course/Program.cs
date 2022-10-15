@@ -5,41 +5,73 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            string original = "abcde FGHIJ ABC abc DEFG   ";
 
-            string s1 = original.ToUpper();
-            string s2 = original.ToLower();
-            string s3 = original.Trim();
+            DateTime dataexact = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            Console.WriteLine(dataexact);
+            DateTime dataexact2 = DateTime.ParseExact("15/08/2000 13:05:58", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+            Console.WriteLine(dataexact2);
 
-            int n1 = original.IndexOf("bc");
-            int n2 = original.LastIndexOf("bc");
+            DateTime data = DateTime.Parse("2000-08-15");
+            Console.WriteLine(data);
+            DateTime data2 = DateTime.Parse("2000-08-15 13:05:58");
+            Console.WriteLine(data2);
+            DateTime data3 = DateTime.Parse("15/08/2000");
+            Console.WriteLine(data3);
+            DateTime data4 = DateTime.Parse("15/08/2000 13:05:58");
+            Console.WriteLine(data4);
 
-            string s4 = original.Substring(3);
-            string s5 = original.Substring(3, 5);
-            string s6 = original.Replace('a', 'x');
-            string s7 = original.Replace("abc", "xy");
+            DateTime d1 = DateTime.Now;
+            Console.WriteLine(d1);
+            Console.WriteLine(d1.Ticks);
+            DateTime d2 = new DateTime(2021, 10, 15);
+            DateTime d3 = new DateTime(2021, 10, 15, 20, 45, 3);
+            DateTime d4 = new DateTime(2021, 10, 15, 20, 45, 3, 500);
+            DateTime d5 = DateTime.Now;
+            DateTime d6 = DateTime.Today;
+            DateTime d7 = DateTime.UtcNow;
 
-            bool b1 = String.IsNullOrEmpty(original);
-            bool b2 = String.IsNullOrWhiteSpace(original);
-
-            Console.WriteLine("Original -" + original + "-");
-            Console.WriteLine("ToUpper -" + s1 + "-");
-            Console.WriteLine("ToLower -" + s2 + "-");
-            Console.WriteLine("Trim -" + s3 + "-");
-            Console.WriteLine("IndexOf('bc') -" + n1);
-            Console.WriteLine("LastIndexOf('bc') -" + n2);
-            Console.WriteLine("Substring(3): -" + s4);
-            Console.WriteLine("Substring(3, 5): -" + s5);
-            Console.WriteLine("Replace ('a', 'x'): -" + s6);
-            Console.WriteLine("Replace ('abc', 'xy'): -" + s7);
-
-            Console.WriteLine("IsNullOrEmpty: "+ b1);
-            Console.WriteLine("IsNullOrWhiteSpace: " + b2);
+            Console.WriteLine(d2); 
+            Console.WriteLine(d3);
+            Console.WriteLine(d4);
+            Console.WriteLine(d5);
+            Console.WriteLine(d6);
+            Console.WriteLine(d7);
 
         }
     }
 }
 
+
+//string original = "abcde FGHIJ ABC abc DEFG   ";
+
+//string s1 = original.ToUpper();
+//string s2 = original.ToLower();
+//string s3 = original.Trim();
+
+//int n1 = original.IndexOf("bc");
+//int n2 = original.LastIndexOf("bc");
+
+//string s4 = original.Substring(3);
+//string s5 = original.Substring(3, 5);
+//string s6 = original.Replace('a', 'x');
+//string s7 = original.Replace("abc", "xy");
+
+//bool b1 = String.IsNullOrEmpty(original);
+//bool b2 = String.IsNullOrWhiteSpace(original);
+
+//Console.WriteLine("Original -" + original + "-");
+//Console.WriteLine("ToUpper -" + s1 + "-");
+//Console.WriteLine("ToLower -" + s2 + "-");
+//Console.WriteLine("Trim -" + s3 + "-");
+//Console.WriteLine("IndexOf('bc') -" + n1);
+//Console.WriteLine("LastIndexOf('bc') -" + n2);
+//Console.WriteLine("Substring(3): -" + s4);
+//Console.WriteLine("Substring(3, 5): -" + s5);
+//Console.WriteLine("Replace ('a', 'x'): -" + s6);
+//Console.WriteLine("Replace ('abc', 'xy'): -" + s7);
+
+//Console.WriteLine("IsNullOrEmpty: "+ b1);
+//Console.WriteLine("IsNullOrWhiteSpace: " + b2);
 
 //double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 //double desconto = (preco < 20) ? preco * 0.1 : preco * 0.05;
