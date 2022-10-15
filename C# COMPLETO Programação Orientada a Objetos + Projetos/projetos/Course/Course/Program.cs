@@ -6,56 +6,94 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 215);
-            string s1 = d.ToLongDateString();
-            string s2 = d.ToLongTimeString();
-            string s3 = d.ToShortDateString();
-            string s4 = d.ToShortTimeString();
-            string s5 = d.ToString();
-            string s6 = d.ToString("yyy-MM-dd HH:mm:ss");
-            string s7 = d.ToString("yyy-MM-dd HH:mm:ss.fff");
-            Console.WriteLine(s1);
-            Console.WriteLine(s2);
-            Console.WriteLine(s3);
-            Console.WriteLine(s4);
-            Console.WriteLine(s5);
-            Console.WriteLine(s6);
-            Console.WriteLine(s7);
 
-            Console.WriteLine(d);
-            Console.WriteLine("1) Date: " + d.Date);
-            Console.WriteLine("2) Day " + d.Day);
-            Console.WriteLine("3) DayOfWeek " + d.DayOfWeek);
-            Console.WriteLine("4) DayOfYear: " + d.DayOfYear);
-            Console.WriteLine("5) Hour: " + d.Hour);
-            Console.WriteLine("6) Kind " + d.Kind);
-            Console.WriteLine("7) Millisecond: " + d.Millisecond);
-            Console.WriteLine("8) Minute: " + d.Minute);
-            Console.WriteLine("9) Month: " + d.Month);
-            Console.WriteLine("10) Second: " + d.Second);
-            Console.WriteLine("11) Ticks: " + d.Ticks);
-            Console.WriteLine("12) TimeOfDay " + d.TimeOfDay);
-            Console.WriteLine("13) Year " + d.Year);
+            //TimeSpan t = new TimeSpan(2, 3, 5, 7, 11);
 
-            DateTime dd = new DateTime(2001, 8, 15, 13, 45, 58, 215);
-            DateTime d2 = dd.AddHours(2);
-            DateTime d3 = dd.AddMinutes(3);
-            DateTime d4 = dd.AddDays(7);
-            Console.WriteLine(dd);
-            Console.WriteLine(d2);
-            Console.WriteLine(d3);
-            Console.WriteLine(d4);
+            //Console.WriteLine(t);
+            //Console.WriteLine("Days: " + t.Days);
+            //Console.WriteLine("Hours: " + t.Hours);
+            //Console.WriteLine("Minutes: " + t.Minutes);
+            //Console.WriteLine("Milliseconds: " + t.Milliseconds);
+            //Console.WriteLine("Seconds: " + t.Seconds);
+            //Console.WriteLine("Ticks: " + t.Ticks);
 
-            DateTime sub1 = new DateTime(2000, 10, 15);
-            DateTime sub2 = new DateTime(2000, 10, 18);
+            //Console.WriteLine("Total Days: " + t.TotalDays);
+            //Console.WriteLine("Total Hours: " + t.TotalHours);
+            //Console.WriteLine("Total Minutes: " + t.TotalMinutes);
+            //Console.WriteLine("Total Seconds: " + t.Seconds);
+            //Console.WriteLine("Total Milliseconds: " + t.Milliseconds);
 
-            TimeSpan t = sub2.Subtract(sub1);
+            //TimeSpan t1 = TimeSpan.MaxValue;
+            //TimeSpan t2 = TimeSpan.MinValue;
+            //TimeSpan t3 = TimeSpan.Zero;
 
-            Console.WriteLine(t);
-          
+            //Console.WriteLine(t1);
+            //Console.WriteLine(t2);
+            //Console.WriteLine(t3);
+
+            TimeSpan t1 = new TimeSpan(1, 30, 10);
+            TimeSpan t2 = new TimeSpan(0, 10, 5);
+
+            TimeSpan sum = t1.Add(t2);
+            TimeSpan dif = t1.Subtract(t2);
+            TimeSpan mult = t2.Multiply(2.0);
+            TimeSpan div = t2.Divide(2.0);
+
+            Console.WriteLine(sum);
+            Console.WriteLine(dif);
+            Console.WriteLine(mult);
+            Console.WriteLine(div);
         }
     }
 }
+
+//DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 215);
+//string s1 = d.ToLongDateString();
+//string s2 = d.ToLongTimeString();
+//string s3 = d.ToShortDateString();
+//string s4 = d.ToShortTimeString();
+//string s5 = d.ToString();
+//string s6 = d.ToString("yyy-MM-dd HH:mm:ss");
+//string s7 = d.ToString("yyy-MM-dd HH:mm:ss.fff");
+//Console.WriteLine(s1);
+//Console.WriteLine(s2);
+//Console.WriteLine(s3);
+//Console.WriteLine(s4);
+//Console.WriteLine(s5);
+//Console.WriteLine(s6);
+//Console.WriteLine(s7);
+
+//Console.WriteLine(d);
+//Console.WriteLine("1) Date: " + d.Date);
+//Console.WriteLine("2) Day " + d.Day);
+//Console.WriteLine("3) DayOfWeek " + d.DayOfWeek);
+//Console.WriteLine("4) DayOfYear: " + d.DayOfYear);
+//Console.WriteLine("5) Hour: " + d.Hour);
+//Console.WriteLine("6) Kind " + d.Kind);
+//Console.WriteLine("7) Millisecond: " + d.Millisecond);
+//Console.WriteLine("8) Minute: " + d.Minute);
+//Console.WriteLine("9) Month: " + d.Month);
+//Console.WriteLine("10) Second: " + d.Second);
+//Console.WriteLine("11) Ticks: " + d.Ticks);
+//Console.WriteLine("12) TimeOfDay " + d.TimeOfDay);
+//Console.WriteLine("13) Year " + d.Year);
+
+//DateTime dd = new DateTime(2001, 8, 15, 13, 45, 58, 215);
+//DateTime d2 = dd.AddHours(2);
+//DateTime d3 = dd.AddMinutes(3);
+//DateTime d4 = dd.AddDays(7);
+//Console.WriteLine(dd);
+//Console.WriteLine(d2);
+//Console.WriteLine(d3);
+//Console.WriteLine(d4);
+
+//DateTime sub1 = new DateTime(2000, 10, 15);
+//DateTime sub2 = new DateTime(2000, 10, 18);
+
+//TimeSpan t = sub2.Subtract(sub1);
+
+//Console.WriteLine(t);
+
 
 //TimeSpan t1 = new TimeSpan();
 //TimeSpan t2 = new TimeSpan(900000000L);
