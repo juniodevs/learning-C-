@@ -6,46 +6,85 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
+            //DateTime d1 = new DateTime(2000, 8, 15, 13, 5, 58, DateTimeKind.Local);
 
-            //TimeSpan t = new TimeSpan(2, 3, 5, 7, 11);
+            //DateTime d2 = new DateTime(2000, 8, 15, 13, 5, 58, DateTimeKind.Utc);
 
-            //Console.WriteLine(t);
-            //Console.WriteLine("Days: " + t.Days);
-            //Console.WriteLine("Hours: " + t.Hours);
-            //Console.WriteLine("Minutes: " + t.Minutes);
-            //Console.WriteLine("Milliseconds: " + t.Milliseconds);
-            //Console.WriteLine("Seconds: " + t.Seconds);
-            //Console.WriteLine("Ticks: " + t.Ticks);
+            //DateTime d3 = new DateTime(2000, 8, 15, 13, 5, 58);
 
-            //Console.WriteLine("Total Days: " + t.TotalDays);
-            //Console.WriteLine("Total Hours: " + t.TotalHours);
-            //Console.WriteLine("Total Minutes: " + t.TotalMinutes);
-            //Console.WriteLine("Total Seconds: " + t.Seconds);
-            //Console.WriteLine("Total Milliseconds: " + t.Milliseconds);
+            //Console.WriteLine("d1: " + d1);
+            //Console.WriteLine("d1 kind: " + d1.Kind);
+            //Console.WriteLine("d1 to local: " + d1.ToLocalTime());
+            //Console.WriteLine("d1 to UTC: " + d1.ToUniversalTime());
+            //Console.WriteLine();
+            //Console.WriteLine("d2: " + d2);
+            //Console.WriteLine("d2 kind: " + d2.Kind);
+            //Console.WriteLine("d2 to local: " + d2.ToLocalTime());
+            //Console.WriteLine("d2 to UTC: " + d2.ToUniversalTime());
+            //Console.WriteLine();
+            //Console.WriteLine("d3: " + d3);
+            //Console.WriteLine("d3 kind: " + d3.Kind);
+            //Console.WriteLine("d3 to local: " + d3.ToLocalTime());
+            //Console.WriteLine("d3 to UTC: " + d3.ToUniversalTime());
 
-            //TimeSpan t1 = TimeSpan.MaxValue;
-            //TimeSpan t2 = TimeSpan.MinValue;
-            //TimeSpan t3 = TimeSpan.Zero;
+            //Console.WriteLine();
+            //Console.WriteLine();
 
-            //Console.WriteLine(t1);
-            //Console.WriteLine(t2);
-            //Console.WriteLine(t3);
+            DateTime d1 = DateTime.Parse("2000-08-15 13:05:58");
+            DateTime d2 = DateTime.Parse("2000-08-15T13:05:58Z");
 
-            TimeSpan t1 = new TimeSpan(1, 30, 10);
-            TimeSpan t2 = new TimeSpan(0, 10, 5);
-
-            TimeSpan sum = t1.Add(t2);
-            TimeSpan dif = t1.Subtract(t2);
-            TimeSpan mult = t2.Multiply(2.0);
-            TimeSpan div = t2.Divide(2.0);
-
-            Console.WriteLine(sum);
-            Console.WriteLine(dif);
-            Console.WriteLine(mult);
-            Console.WriteLine(div);
+            Console.WriteLine("d1: " + d1);
+            Console.WriteLine("d1 Kind: " + d1.Kind);
+            Console.WriteLine("d1 to Local: " + d1.ToLocalTime());
+            Console.WriteLine("d1 to Local: " + d1.ToUniversalTime());
+            Console.WriteLine();
+            Console.WriteLine("d2: " + d2);
+            Console.WriteLine("d2 Kind: " + d2.Kind);
+            Console.WriteLine("d2 to Local: " + d2.ToLocalTime());
+            Console.WriteLine("d2 to Local: " + d2.ToUniversalTime());
+            Console.WriteLine();
+            Console.WriteLine(d2.ToString("yyyy-MM-ddTHH:mm:ssZ")); //CUIDADO!
+            Console.WriteLine(d2.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
         }
     }
 }
+
+//TimeSpan t = new TimeSpan(2, 3, 5, 7, 11);
+
+//Console.WriteLine(t);
+//Console.WriteLine("Days: " + t.Days);
+//Console.WriteLine("Hours: " + t.Hours);
+//Console.WriteLine("Minutes: " + t.Minutes);
+//Console.WriteLine("Milliseconds: " + t.Milliseconds);
+//Console.WriteLine("Seconds: " + t.Seconds);
+//Console.WriteLine("Ticks: " + t.Ticks);
+
+//Console.WriteLine("Total Days: " + t.TotalDays);
+//Console.WriteLine("Total Hours: " + t.TotalHours);
+//Console.WriteLine("Total Minutes: " + t.TotalMinutes);
+//Console.WriteLine("Total Seconds: " + t.Seconds);
+//Console.WriteLine("Total Milliseconds: " + t.Milliseconds);
+
+//TimeSpan t1 = TimeSpan.MaxValue;
+//TimeSpan t2 = TimeSpan.MinValue;
+//TimeSpan t3 = TimeSpan.Zero;
+
+//Console.WriteLine(t1);
+//Console.WriteLine(t2);
+//Console.WriteLine(t3);
+
+//TimeSpan t1 = new TimeSpan(1, 30, 10);
+//TimeSpan t2 = new TimeSpan(0, 10, 5);
+
+//TimeSpan sum = t1.Add(t2);
+//TimeSpan dif = t1.Subtract(t2);
+//TimeSpan mult = t2.Multiply(2.0);
+//TimeSpan div = t2.Divide(2.0);
+
+//Console.WriteLine(sum);
+//Console.WriteLine(dif);
+//Console.WriteLine(mult);
+//Console.WriteLine(div);
 
 //DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 215);
 //string s1 = d.ToLongDateString();
