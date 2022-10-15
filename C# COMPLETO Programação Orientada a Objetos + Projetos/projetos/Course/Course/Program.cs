@@ -5,41 +5,66 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
+            TimeSpan t1 = new TimeSpan();
+            TimeSpan t2 = new TimeSpan(900000000L);
+            TimeSpan t3 = new TimeSpan(2, 11, 21);
+            TimeSpan t4 = new TimeSpan(1, 2, 11, 21);
+            TimeSpan t5 = new TimeSpan(1, 2, 11, 21, 321);
 
-            DateTime dataexact = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            Console.WriteLine(dataexact);
-            DateTime dataexact2 = DateTime.ParseExact("15/08/2000 13:05:58", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-            Console.WriteLine(dataexact2);
+            Console.WriteLine(t1);
+            Console.WriteLine(t2);
+            Console.WriteLine(t3);
+            Console.WriteLine(t4);
+            Console.WriteLine(t5);
 
-            DateTime data = DateTime.Parse("2000-08-15");
-            Console.WriteLine(data);
-            DateTime data2 = DateTime.Parse("2000-08-15 13:05:58");
-            Console.WriteLine(data2);
-            DateTime data3 = DateTime.Parse("15/08/2000");
-            Console.WriteLine(data3);
-            DateTime data4 = DateTime.Parse("15/08/2000 13:05:58");
-            Console.WriteLine(data4);
-
-            DateTime d1 = DateTime.Now;
-            Console.WriteLine(d1);
-            Console.WriteLine(d1.Ticks);
-            DateTime d2 = new DateTime(2021, 10, 15);
-            DateTime d3 = new DateTime(2021, 10, 15, 20, 45, 3);
-            DateTime d4 = new DateTime(2021, 10, 15, 20, 45, 3, 500);
-            DateTime d5 = DateTime.Now;
-            DateTime d6 = DateTime.Today;
-            DateTime d7 = DateTime.UtcNow;
-
-            Console.WriteLine(d2); 
-            Console.WriteLine(d3);
-            Console.WriteLine(d4);
-            Console.WriteLine(d5);
-            Console.WriteLine(d6);
-            Console.WriteLine(d7);
-
+            TimeSpan timeFromDays = TimeSpan.FromDays(1.5);
+            TimeSpan timeFromHours = TimeSpan.FromHours(1.5);
+            TimeSpan timeFromMinutes = TimeSpan.FromMinutes(1.5);
+            TimeSpan timeFromSeconds = TimeSpan.FromSeconds(1.5);
+            TimeSpan timeFromMillieseconds = TimeSpan.FromMilliseconds(1.5);
+            TimeSpan timeFromTicks = TimeSpan.FromTicks(900000000L);
+            Console.WriteLine(timeFromDays);
+            Console.WriteLine(timeFromHours);
+            Console.WriteLine(timeFromMinutes);
+            Console.WriteLine(timeFromSeconds);
+            Console.WriteLine(timeFromMillieseconds);
+            Console.WriteLine(timeFromTicks);
         }
     }
 }
+
+
+
+//DateTime dataexact = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+//Console.WriteLine(dataexact);
+//DateTime dataexact2 = DateTime.ParseExact("15/08/2000 13:05:58", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+//Console.WriteLine(dataexact2);
+
+//DateTime data = DateTime.Parse("2000-08-15");
+//Console.WriteLine(data);
+//DateTime data2 = DateTime.Parse("2000-08-15 13:05:58");
+//Console.WriteLine(data2);
+//DateTime data3 = DateTime.Parse("15/08/2000");
+//Console.WriteLine(data3);
+//DateTime data4 = DateTime.Parse("15/08/2000 13:05:58");
+//Console.WriteLine(data4);
+
+//DateTime d1 = DateTime.Now;
+//Console.WriteLine(d1);
+//Console.WriteLine(d1.Ticks);
+//DateTime d2 = new DateTime(2021, 10, 15);
+//DateTime d3 = new DateTime(2021, 10, 15, 20, 45, 3);
+//DateTime d4 = new DateTime(2021, 10, 15, 20, 45, 3, 500);
+//DateTime d5 = DateTime.Now;
+//DateTime d6 = DateTime.Today;
+//DateTime d7 = DateTime.UtcNow;
+
+//Console.WriteLine(d2); 
+//Console.WriteLine(d3);
+//Console.WriteLine(d4);
+//Console.WriteLine(d5);
+//Console.WriteLine(d6);
+//Console.WriteLine(d7);
 
 
 //string original = "abcde FGHIJ ABC abc DEFG   ";
