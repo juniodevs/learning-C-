@@ -5,37 +5,44 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            int x = int.Parse(Console.ReadLine());
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double desconto = (preco < 20) ? preco * 0.1 : preco * 0.05;
 
-            switch(x) {
-                case 1:
-                    Console.WriteLine(x + " Domingo");
-                    break;
-                case 2:
-                    Console.WriteLine(x + " Segunda");
-                    break;
-                case 3:
-                    Console.WriteLine(x + " Terça");
-                    break;
-                case 4:
-                    Console.WriteLine(x + " Quarta");
-                    break;
-                case 5:
-                    Console.WriteLine(x + " Quinta");
-                    break;
-                case 6:
-                    Console.WriteLine(x + " Sexta");
-                    break;
-                case 7:
-                    Console.WriteLine(x + " Sábado");
-                    break;
-                default:
-                    Console.WriteLine(x + " Invalid Value");
-                    break;
-            }
+            Console.WriteLine(desconto);
+
         }
     }
 }
+
+//int x = int.Parse(Console.ReadLine());
+
+//switch(x) {
+//    case 1:
+//        Console.WriteLine(x + " Domingo");
+//        break;
+//    case 2:
+//        Console.WriteLine(x + " Segunda");
+//        break;
+//    case 3:
+//        Console.WriteLine(x + " Terça");
+//        break;
+//    case 4:
+//        Console.WriteLine(x + " Quarta");
+//        break;
+//    case 5:
+//        Console.WriteLine(x + " Quinta");
+//        break;
+//    case 6:
+//        Console.WriteLine(x + " Sexta");
+//        break;
+//    case 7:
+//        Console.WriteLine(x + " Sábado");
+//        break;
+//    default:
+//        Console.WriteLine(x + " Invalid Value");
+//        break;
+//}
+
 //var x = 10;
 //var y = 20.0;
 //var z = "Maria";
