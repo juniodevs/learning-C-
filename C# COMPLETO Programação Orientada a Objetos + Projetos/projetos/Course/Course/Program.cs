@@ -5,15 +5,42 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            var x = 10;
-            var y = 20.0;
-            var z = "Maria";
+            int x = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(x +" "+ y +" "+ z);
-
+            switch(x) {
+                case 1:
+                    Console.WriteLine(x + " Domingo");
+                    break;
+                case 2:
+                    Console.WriteLine(x + " Segunda");
+                    break;
+                case 3:
+                    Console.WriteLine(x + " Terça");
+                    break;
+                case 4:
+                    Console.WriteLine(x + " Quarta");
+                    break;
+                case 5:
+                    Console.WriteLine(x + " Quinta");
+                    break;
+                case 6:
+                    Console.WriteLine(x + " Sexta");
+                    break;
+                case 7:
+                    Console.WriteLine(x + " Sábado");
+                    break;
+                default:
+                    Console.WriteLine(x + " Invalid Value");
+                    break;
+            }
         }
     }
 }
+//var x = 10;
+//var y = 20.0;
+//var z = "Maria";
+
+//Console.WriteLine(x +" "+ y +" "+ z);
 
 //            int N = int.Parse(Console.ReadLine());
 //            int negativos = 0;
