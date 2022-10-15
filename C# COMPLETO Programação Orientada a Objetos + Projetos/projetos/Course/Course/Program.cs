@@ -5,31 +5,38 @@ namespace Course {
     class Program {
         static void Main(string[] args) {
 
-            int N = int.Parse(Console.ReadLine());
-            int negativos = 0;
+            var x = 10;
+            var y = 20.0;
+            var z = "Maria";
 
-            int[,] mat = new int[N,N];
+            Console.WriteLine(x +" "+ y +" "+ z);
 
-            for (int i = 0; i < N; i++) {
-
-                string[] values = Console.ReadLine().Split(' ');
-                for (int j = 0; j < N; j++) {
-                    mat[i, j] = int.Parse(values[j]);
-                    if (mat[i,j] < 0) {
-                        negativos++;
-                    }
-                }
-            }
-
-            Console.WriteLine("Main Diagonal: ");
-
-            for (int i = 0; i < N; i++) {
-                Console.Write(mat[i,i] + " ");
-            }
-            Console.WriteLine("\nNegative numbers: " + negativos);
         }
     }
 }
+
+//            int N = int.Parse(Console.ReadLine());
+//            int negativos = 0;
+
+//            int[,] mat = new int[N,N];
+
+//            for (int i = 0; i < N; i++) {
+
+//                string[] values = Console.ReadLine().Split(' ');
+//                for (int j = 0; j < N; j++) {
+//                    mat[i, j] = int.Parse(values[j]);
+//                    if (mat[i,j] < 0) {
+//                        negativos++;
+//                    }
+//                }
+//            }
+
+//            Console.WriteLine("Main Diagonal: ");
+
+//            for (int i = 0; i < N; i++) {
+//                Console.Write(mat[i,i] + " ");
+//            }
+//            Console.WriteLine("\nNegative numbers: " + negativos);
 
 //double[,] mat = new double[2, 3];
 
