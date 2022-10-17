@@ -1,22 +1,27 @@
 ﻿using System.Globalization;
 
-namespace Course {
-    class Produto {
+namespace Course.OldEntities
+{
+    class Produto
+    {
         private string _nome;
-        public double Preco { get; private set;}
-        public int Quantidade { get; private set;}
-        public Produto(string nome, double preco, int quantidade) {
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
+        public Produto(string nome, double preco, int quantidade)
+        {
             _nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
 
 
-        public string Nome {
+        public string Nome
+        {
             get { return _nome; }
-            set {
+            set
+            {
                 if (value != null && value.Length > 1)
-                    this._nome = value;
+                    _nome = value;
             }
         }
 
@@ -36,20 +41,24 @@ namespace Course {
         //}
 
 
-        public double ValorTotalEmEstoque() {
+        public double ValorTotalEmEstoque()
+        {
 
             return Preco * Quantidade;
         }
 
-        public void AdicionarProdutos(int quantidade) {
-            this.Quantidade += quantidade;
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
         }
 
-        public void RemoverProdutos(int quantidade) {
-            this.Quantidade -= quantidade;
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return _nome
                 + ", $ "
                 + Preco.ToString("F2", CultureInfo.InvariantCulture)

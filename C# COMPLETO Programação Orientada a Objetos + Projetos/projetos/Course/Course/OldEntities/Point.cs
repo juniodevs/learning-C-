@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Course {
-    struct Point {
+namespace Course.OldEntities
+{
+    struct Point
+    {
         public double X;
         public double Y;
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return "(" + X + ", " + Y + ")";
         }
     }
