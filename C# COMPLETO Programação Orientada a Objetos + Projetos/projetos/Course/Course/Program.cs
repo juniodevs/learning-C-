@@ -10,26 +10,30 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Order order = new Order
-            {
-                Id = 1080,
-                Moment = DateTime.Now,
-                Status = OrderStatus.PendingPayment
-            };
+            BusinessAccount account = new BusinessAccount(8010, "Bob Brown", 100.00, 500.00);
+            Console.WriteLine(account.Balance);
 
-            Console.WriteLine(order);
-
-
-            string txt = OrderStatus.PendingPayment.ToString();
-            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
-
-            Console.WriteLine(os);
-            Console.WriteLine(txt);
-            
+            account.Deposit(100);
 
         }
     }
 }
+
+//Order order = new Order
+//{
+//    Id = 1080,
+//    Moment = DateTime.Now,
+//    Status = OrderStatus.PendingPayment
+//};
+
+//Console.WriteLine(order);
+
+
+//string txt = OrderStatus.PendingPayment.ToString();
+//OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+//Console.WriteLine(os);
+//Console.WriteLine(txt);
 
 //DateTime d1 = new DateTime(2000, 8, 15, 13, 5, 58, DateTimeKind.Local);
 
