@@ -10,38 +10,57 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            List<Account> list = new List<Account>();
 
-            list.Add(new SavingsAccount(1001, "Alex", 500.0, 0.01));
-            list.Add(new BusinessAccount(1002, "Maria", 500.0, 400));
-            list.Add(new SavingsAccount(1003, "Bob", 500.0, 0.01));
-            list.Add(new BusinessAccount(1004, "Ana", 500.0, 500.0));
-
-            double sum = 0.0;
-
-            foreach(Account acc in list)
+            try
             {
-                sum += acc.Balance;
+                int n1 = int.Parse(Console.ReadLine());
+                int n2 = int.Parse(Console.ReadLine());
+
+                int result = n1 / n2;
+
+                Console.WriteLine(result);
             }
-
-            Console.WriteLine("Total Balance: " + sum.ToString("F2",CultureInfo.InvariantCulture));
-
-            foreach(Account acc in list)
+            catch (DivideByZeroException)
             {
-                acc.Withdraw(10.0);
+                Console.WriteLine("Division by zero is not allowed");
             }
-
-            foreach(Account acc in list)
+            catch(FormatException e)
             {
-                Console.WriteLine("Updated balance for account"
-                    + acc.Number
-                    + ": "
-                    + acc.Balance.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("Format Error!: " + e.Message);
             }
         }
+
     }
 }
 
+//List<Account> list = new List<Account>();
+
+//list.Add(new SavingsAccount(1001, "Alex", 500.0, 0.01));
+//list.Add(new BusinessAccount(1002, "Maria", 500.0, 400));
+//list.Add(new SavingsAccount(1003, "Bob", 500.0, 0.01));
+//list.Add(new BusinessAccount(1004, "Ana", 500.0, 500.0));
+
+//double sum = 0.0;
+
+//foreach(Account acc in list)
+//{
+//    sum += acc.Balance;
+//}
+
+//Console.WriteLine("Total Balance: " + sum.ToString("F2",CultureInfo.InvariantCulture));
+
+//foreach(Account acc in list)
+//{
+//    acc.Withdraw(10.0);
+//}
+
+//foreach(Account acc in list)
+//{
+//    Console.WriteLine("Updated balance for account"
+//        + acc.Number
+//        + ": "
+//        + acc.Balance.ToString("F2", CultureInfo.InvariantCulture));
+//}
 
 
 //Account acc = new Account(1001, "Alex", 0.0);
