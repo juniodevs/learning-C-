@@ -14,10 +14,8 @@ namespace Course
             string path = @"C:\Windows\Temp\file1.txt";
 
             try
-                { 
-            using (FileStream fs = new FileStream(path, FileMode.Open))
-            {
-                using (StreamReader sr = new StreamReader(fs))
+                {
+                using (StreamReader sr = File.OpenText(path))
                 {
                     while (!sr.EndOfStream)
                     {
@@ -25,7 +23,6 @@ namespace Course
                         Console.WriteLine(line);
                     }
                 }
-            }
             }
             catch(IOException e)
             {
