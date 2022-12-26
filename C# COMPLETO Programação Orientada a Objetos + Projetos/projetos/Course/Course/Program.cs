@@ -12,37 +12,49 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Windows\Temp\myfolder";
+            string path = @"C:\Windows\Temp\myfolder\file1.txt";
 
-            try{
-
-                IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("Folders: ");
-                foreach (string s in folders)
-                {
-                    Console.WriteLine(s);
-                }
-
-                IEnumerable<string> files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("Files: ");
-                foreach (string s in files)
-                {
-                    Console.WriteLine(s);
-                }
-
-                Directory.CreateDirectory(path + @"\newfolder");
-            }
-            catch(IOException e)
-            {
-                Console.WriteLine("An error occurred");
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
+            Console.WriteLine("PathSeparator: " + Path.PathSeparator);
+            Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
+            Console.WriteLine("GetFileName: " + Path.GetFileName(path));
+            Console.WriteLine("GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("GetExtension: " + Path.GetExtension(path));
+            Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
+            Console.WriteLine("GetTempPath: " + Path.GetTempPath());
         }
     }
 }
 
-            //    string path = @"C:\Windows\Temp\file1.txt";
-            //    string targetPath = @"C:\Windows\temp\file2.txt";
+            //    string path = @"C:\Windows\Temp\myfolder";
+
+//    try{
+
+//        IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+//        Console.WriteLine("Folders: ");
+//        foreach (string s in folders)
+//        {
+//            Console.WriteLine(s);
+//        }
+
+//        IEnumerable<string> files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+//        Console.WriteLine("Files: ");
+//        foreach (string s in files)
+//        {
+//            Console.WriteLine(s);
+//        }
+
+//        Directory.CreateDirectory(path + @"\newfolder");
+//    }
+//    catch(IOException e)
+//    {
+//        Console.WriteLine("An error occurred");
+//        Console.WriteLine(e.Message);
+//    }
+//}
+
+//    string path = @"C:\Windows\Temp\file1.txt";
+//    string targetPath = @"C:\Windows\temp\file2.txt";
 
 //    try
 //        {
