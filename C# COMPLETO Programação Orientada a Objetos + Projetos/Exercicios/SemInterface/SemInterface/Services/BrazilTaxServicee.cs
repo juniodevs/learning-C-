@@ -2,7 +2,7 @@
 
 namespace SemInterface.Services
 {
-    internal class BrazilTaxServicee
+    internal class BrazilTaxService
     {
         public double Tax(double amount)
         {
