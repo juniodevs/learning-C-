@@ -5,6 +5,7 @@ using System.Collections;
 using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Course
 {
@@ -12,10 +13,17 @@ namespace Course
     {
         static void Main(string[] args)
         {
+            Retangulo r1 = new Retangulo();
 
+            r1.DefinirMedidias(4, 5);
+
+            Console.WriteLine(r1.ObterArea()); 
         }
     }
 }
+
+//Pessoa p1 = new Pessoa("André", 21);
+//p1.Apresentar();
 
 //string path = @"C:\Windows\Temp\myfolder\file1.txt";
 
