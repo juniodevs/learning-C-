@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Course.Model.Entities;
 using Course.Model.Enums;
+using Course.Devices;
 
 namespace Course
 {
@@ -15,13 +16,26 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            IShape s1 = new Circle() { Radius = 2.0, Color = Color.White };
-            IShape s2 = new Rectangle() { Height = 2.0, Width = 2.0, Color = Color.Black };
-            Console.WriteLine(s1);
-            Console.WriteLine(s2);
+            Printer p = new Printer() { SerialNumber = 1080 };
+            p.ProcessDoc("My letter");
+            p.Print("My letter");
+
+            Scanner s = new Scanner() { SerialNumber = 2003 };
+            s.ProcessDoc("My Email");
+            Console.WriteLine(s.Scan());
+
+            ComboDevice c = new ComboDevice() { SerialNumber = 1000 };
+            c.ProcessDoc("My Dissertation");
+            c.Print("My Dissertation");
+            Console.WriteLine(c.Scan());
         }
     }
 }
+
+//IShape s1 = new Circle() { Radius = 2.0, Color = Color.White };
+//IShape s2 = new Rectangle() { Height = 2.0, Width = 2.0, Color = Color.Black };
+//Console.WriteLine(s1);
+//Console.WriteLine(s2);
 
 //Retangulo r1 = new Retangulo();
 
