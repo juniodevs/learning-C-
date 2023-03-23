@@ -6,6 +6,8 @@ using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using Course.Model.Entities;
+using Course.Model.Enums;
 
 namespace Course
 {
@@ -13,15 +15,19 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Retangulo r1 = new Retangulo();
-
-            r1.DefinirMedidias(4, 5);
-
-            Console.WriteLine(r1.ObterArea()); 
+            IShape s1 = new Circle() { Radius = 2.0, Color = Color.White };
+            IShape s2 = new Rectangle() { Height = 2.0, Width = 2.0, Color = Color.Black };
+            Console.WriteLine(s1);
+            Console.WriteLine(s2);
         }
     }
 }
 
+//Retangulo r1 = new Retangulo();
+
+//r1.DefinirMedidias(4, 5);
+
+//Console.WriteLine(r1.ObterArea()); 
 //Pessoa p1 = new Pessoa("André", 21);
 //p1.Apresentar();
 
