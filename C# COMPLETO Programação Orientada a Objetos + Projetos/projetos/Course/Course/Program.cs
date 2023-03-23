@@ -16,33 +16,45 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Windows\Temp\in.txt";
+            PrintService printService = new PrintService();
+            Console.Write("How many values? ");
+            int n = int.Parse(Console.ReadLine());
 
-            try
+            for(int i = 0; i < n; i++)
             {
-                using (StreamReader sr = File.OpenText(path)) {
-                    {
-                        List<Employer> list = new List<Employer>();
-                        while (!sr.EndOfStream)
-                        {
-                            list.Add(new Employer(sr.ReadLine()));
-                        }
-                        list.Sort();
-                        foreach (Employer emp in list)
-                        {
-                            Console.WriteLine(emp);
-                        }
-                    }
-                }
+                int x = int.Parse(Console.ReadLine());
+                printService.AddValue(x);
             }
-            catch(IOException e)
-            {
-                Console.WriteLine("An error ocurred");
-                Console.WriteLine(e.Message);
-            }
+            printService.Print();
+            Console.WriteLine("First: " + printService.First());
         }
     }
 }
+
+//string path = @"C:\Windows\Temp\in.txt";
+
+//try
+//{
+//    using (StreamReader sr = File.OpenText(path)) {
+//        {
+//            List<Employer> list = new List<Employer>();
+//            while (!sr.EndOfStream)
+//            {
+//                list.Add(new Employer(sr.ReadLine()));
+//            }
+//            list.Sort();
+//            foreach (Employer emp in list)
+//            {
+//                Console.WriteLine(emp);
+//            }
+//        }
+//    }
+//}
+//catch(IOException e)
+//{
+//    Console.WriteLine("An error ocurred");
+//    Console.WriteLine(e.Message);
+//}
 
 //Printer p = new Printer() { SerialNumber = 1080 };
 //p.ProcessDoc("My letter");
