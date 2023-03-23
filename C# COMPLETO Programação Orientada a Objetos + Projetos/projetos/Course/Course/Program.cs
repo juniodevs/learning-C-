@@ -16,21 +16,46 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Printer p = new Printer() { SerialNumber = 1080 };
-            p.ProcessDoc("My letter");
-            p.Print("My letter");
+            string path = @"C:\Windows\Temp\in.txt";
 
-            Scanner s = new Scanner() { SerialNumber = 2003 };
-            s.ProcessDoc("My Email");
-            Console.WriteLine(s.Scan());
-
-            ComboDevice c = new ComboDevice() { SerialNumber = 1000 };
-            c.ProcessDoc("My Dissertation");
-            c.Print("My Dissertation");
-            Console.WriteLine(c.Scan());
+            try
+            {
+                using (StreamReader sr = File.OpenText(path)) {
+                    {
+                        List<Employer> list = new List<Employer>();
+                        while (!sr.EndOfStream)
+                        {
+                            list.Add(new Employer(sr.ReadLine()));
+                        }
+                        list.Sort();
+                        foreach (Employer emp in list)
+                        {
+                            Console.WriteLine(emp);
+                        }
+                    }
+                }
+            }
+            catch(IOException e)
+            {
+                Console.WriteLine("An error ocurred");
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
+
+//Printer p = new Printer() { SerialNumber = 1080 };
+//p.ProcessDoc("My letter");
+//p.Print("My letter");
+
+//Scanner s = new Scanner() { SerialNumber = 2003 };
+//s.ProcessDoc("My Email");
+//Console.WriteLine(s.Scan());
+
+//ComboDevice c = new ComboDevice() { SerialNumber = 1000 };
+//c.ProcessDoc("My Dissertation");
+//c.Print("My Dissertation");
+//Console.WriteLine(c.Scan());
 
 //IShape s1 = new Circle() { Radius = 2.0, Color = Color.White };
 //IShape s2 = new Rectangle() { Height = 2.0, Width = 2.0, Color = Color.Black };
