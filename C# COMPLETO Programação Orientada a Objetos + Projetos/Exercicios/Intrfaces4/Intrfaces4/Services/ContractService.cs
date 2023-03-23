@@ -1,7 +1,5 @@
 ﻿using System;
 using Course.Entities;
-using Intrfaces4.Services;
-
 namespace Course.Services
 {
     class ContractService
