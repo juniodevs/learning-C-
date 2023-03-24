@@ -16,27 +16,56 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            List<Product> list = new List<Product>();
 
-            Console.Write("Enter N: ");
-            int n = int.Parse(Console.ReadLine());
+            Client a = new Client("Maria", "Maria@gmail.com");
+            Client b = new Client("Alex", "Alex@gmail.com");
+            Client c = new Client("Maria", "Maria@gmail.com");
 
-            for (int i = 0; i < n; i++) {
-                string[] vect = Console.ReadLine().Split(',');
-                string name = vect[0];
-                double price = double.Parse(vect[1], CultureInfo.InvariantCulture);
-                list.Add(new Product(name, price));
-            }
+            Console.WriteLine(a.Equals(b));
+            Console.WriteLine(a.Equals(c));
 
-            CalculationService calculationService = new CalculationService();
+            Console.WriteLine(a.GetHashCode());
+            Console.WriteLine(b.GetHashCode());
+            Console.WriteLine(c.GetHashCode());
 
-            Product max = calculationService.Max(list);
+            Console.WriteLine(a == b);
+            Console.WriteLine(a == c);
+            //string a = "Maria";
+            //string b = "Alex";
 
-            Console.WriteLine("Max");
-            Console.WriteLine(max);
+            //Console.WriteLine(a.Equals(b));
+            //Console.WriteLine(a.GetHashCode());
+            //Console.WriteLine(a.GetHashCode());
+            //Console.WriteLine(b.GetHashCode());
+
+            //if(a.GetHashCode() == a.GetHashCode())
+            //{
+            //    Console.WriteLine("Iguais");
+            //}
+
+
         }
     }
 }
+
+//List<Product> list = new List<Product>();
+
+//Console.Write("Enter N: ");
+//int n = int.Parse(Console.ReadLine());
+
+//for (int i = 0; i < n; i++) {
+//    string[] vect = Console.ReadLine().Split(',');
+//    string name = vect[0];
+//    double price = double.Parse(vect[1], CultureInfo.InvariantCulture);
+//    list.Add(new Product(name, price));
+//}
+
+//CalculationService calculationService = new CalculationService();
+
+//Product max = calculationService.Max(list);
+
+//Console.WriteLine("Max");
+//Console.WriteLine(max);
 
 //PrintService<string> printService = new PrintService<string>();
 //Console.Write("How many values? ");
