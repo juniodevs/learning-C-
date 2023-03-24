@@ -16,38 +16,68 @@ namespace Course
     {
         static void Main(string[] args)
         {
+            Dictionary<string, string> cookies = new Dictionary<string, string>();
 
-            HashSet<Product2> a = new HashSet<Product2>();
+            cookies["user"] = "maria";
+            cookies["email"] = "maria@gmail.com";
+            cookies["phone"] = "99712234";
+            cookies["phone"] = "24623456";
 
-            a.Add(new Product2("TV", 900.0));
-            a.Add(new Product2("Notebook", 1200.0));
+            Console.WriteLine(cookies["phone"]);
+            Console.WriteLine(cookies["email"]);
 
-            HashSet<Point> b = new HashSet<Point>();
+            cookies.Remove("email");
 
-            b.Add(new Point(3, 4));
-            b.Add(new Point(5, 10));
+            if(cookies.ContainsKey("email"))
+                Console.WriteLine(cookies["email"]);
+            else
+                Console.WriteLine("There is no 'email' key");
 
-            Product2 prod = new Product2("Notebook", 1200.0);
+            Console.WriteLine(cookies.Count);
 
-            Console.WriteLine(a.Contains(prod));
+            Console.WriteLine("ALL COOKIES");
 
-            Point p = new Point(5, 10);
-            Console.WriteLine(b.Contains(p));
+            foreach (KeyValuePair<string, string> item in cookies)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
 
-            //HashSet<string> set = new HashSet<string>();
+            foreach (var item in cookies)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
 
-            //set.Add("Maria");
-            //set.Add("Alex");
-
-            //Console.WriteLine(set.Contains("Maria"));
         }
 
     }
 }
 
+//HashSet<Product2> a = new HashSet<Product2>();
 
-        //    SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
-        //    SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
+//a.Add(new Product2("TV", 900.0));
+//a.Add(new Product2("Notebook", 1200.0));
+
+//HashSet<Point> b = new HashSet<Point>();
+
+//b.Add(new Point(3, 4));
+//b.Add(new Point(5, 10));
+
+//Product2 prod = new Product2("Notebook", 1200.0);
+
+//Console.WriteLine(a.Contains(prod));
+
+//Point p = new Point(5, 10);
+//Console.WriteLine(b.Contains(p));
+
+//HashSet<string> set = new HashSet<string>();
+
+//set.Add("Maria");
+//set.Add("Alex");
+
+//Console.WriteLine(set.Contains("Maria"));
+
+//    SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
+//    SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
 
 //    //int[] z = { 10, 20, 30, 40, 50, 60 };
 
