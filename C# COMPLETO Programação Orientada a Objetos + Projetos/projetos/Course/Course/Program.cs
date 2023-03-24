@@ -17,47 +17,74 @@ namespace Course
         static void Main(string[] args)
         {
 
-            SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
-            SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
+            HashSet<Product2> a = new HashSet<Product2>();
 
-            //int[] z = { 10, 20, 30, 40, 50, 60 };
+            a.Add(new Product2("TV", 900.0));
+            a.Add(new Product2("Notebook", 1200.0));
 
-            //union
+            HashSet<Point> b = new HashSet<Point>();
 
-            SortedSet<int> c = new SortedSet<int>(a);
+            b.Add(new Point(3, 4));
+            b.Add(new Point(5, 10));
 
-            c.UnionWith(b);
+            Product2 prod = new Product2("Notebook", 1200.0);
 
-            PrintCollection(c);
+            Console.WriteLine(a.Contains(prod));
 
-            //intersection
+            Point p = new Point(5, 10);
+            Console.WriteLine(b.Contains(p));
 
+            //HashSet<string> set = new HashSet<string>();
 
-            SortedSet<int> d = new SortedSet<int>(a);
-            d.IntersectWith(b);
+            //set.Add("Maria");
+            //set.Add("Alex");
 
-            PrintCollection(d);
-
-            // difference
-
-            SortedSet<int> e = new SortedSet<int>(a);
-
-            e.ExceptWith(b);
-
-            PrintCollection(e);
-
+            //Console.WriteLine(set.Contains("Maria"));
         }
 
-        static void PrintCollection<T>(IEnumerable<T> collection)
-        {
-            foreach(T item in collection)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
-        }
     }
 }
+
+
+        //    SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
+        //    SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
+
+//    //int[] z = { 10, 20, 30, 40, 50, 60 };
+
+//    //union
+
+//    SortedSet<int> c = new SortedSet<int>(a);
+
+//    c.UnionWith(b);
+
+//    PrintCollection(c);
+
+//    //intersection
+
+
+//    SortedSet<int> d = new SortedSet<int>(a);
+//    d.IntersectWith(b);
+
+//    PrintCollection(d);
+
+//    // difference
+
+//    SortedSet<int> e = new SortedSet<int>(a);
+
+//    e.ExceptWith(b);
+
+//    PrintCollection(e);
+
+//}
+
+//static void PrintCollection<T>(IEnumerable<T> collection)
+//{
+//    foreach(T item in collection)
+//    {
+//        Console.Write(item + " ");
+//    }
+//    Console.WriteLine();
+//}
 
 //HashSet<string> set = new HashSet<string>();
 
