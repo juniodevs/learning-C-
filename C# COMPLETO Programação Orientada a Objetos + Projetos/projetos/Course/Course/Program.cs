@@ -16,37 +16,50 @@ namespace Course
     {
         static void Main(string[] args)
         {
+            HashSet<string> set = new HashSet<string>();
 
-            Client a = new Client("Maria", "Maria@gmail.com");
-            Client b = new Client("Alex", "Alex@gmail.com");
-            Client c = new Client("Maria", "Maria@gmail.com");
+            set.Add("TV");
+            set.Add("Notebook");
+            set.Add("Tablete");
 
-            Console.WriteLine(a.Equals(b));
-            Console.WriteLine(a.Equals(c));
+            Console.WriteLine(set.Contains("Notebook"));
+            Console.WriteLine(set.Contains("Notebook 2"));
 
-            Console.WriteLine(a.GetHashCode());
-            Console.WriteLine(b.GetHashCode());
-            Console.WriteLine(c.GetHashCode());
-
-            Console.WriteLine(a == b);
-            Console.WriteLine(a == c);
-            //string a = "Maria";
-            //string b = "Alex";
-
-            //Console.WriteLine(a.Equals(b));
-            //Console.WriteLine(a.GetHashCode());
-            //Console.WriteLine(a.GetHashCode());
-            //Console.WriteLine(b.GetHashCode());
-
-            //if(a.GetHashCode() == a.GetHashCode())
-            //{
-            //    Console.WriteLine("Iguais");
-            //}
+            foreach(string s in set)
+            {
+                Console.WriteLine(s);
+            }
 
 
         }
     }
 }
+
+//Client a = new Client("Maria", "Maria@gmail.com");
+//Client b = new Client("Alex", "Alex@gmail.com");
+//Client c = new Client("Maria", "Maria@gmail.com");
+
+//Console.WriteLine(a.Equals(b));
+//Console.WriteLine(a.Equals(c));
+
+//Console.WriteLine(a.GetHashCode());
+//Console.WriteLine(b.GetHashCode());
+//Console.WriteLine(c.GetHashCode());
+
+//Console.WriteLine(a == b);
+//Console.WriteLine(a == c);
+//string a = "Maria";
+//string b = "Alex";
+
+//Console.WriteLine(a.Equals(b));
+//Console.WriteLine(a.GetHashCode());
+//Console.WriteLine(a.GetHashCode());
+//Console.WriteLine(b.GetHashCode());
+
+//if(a.GetHashCode() == a.GetHashCode())
+//{
+//    Console.WriteLine("Iguais");
+//}
 
 //List<Product> list = new List<Product>();
 
