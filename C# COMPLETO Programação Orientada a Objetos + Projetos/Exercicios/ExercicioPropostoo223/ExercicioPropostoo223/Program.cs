@@ -42,8 +42,6 @@ namespace Program
             {
                 Console.WriteLine(e.Message);
             }
-
-
         }
     }
 }
