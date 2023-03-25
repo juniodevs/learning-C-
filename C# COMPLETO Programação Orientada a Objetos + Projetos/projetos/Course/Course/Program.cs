@@ -10,47 +10,55 @@ using Course.Model.Entities;
 using Course.Model.Enums;
 using Course.Devices;
 
+
 namespace Course
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> cookies = new Dictionary<string, string>();
+            DateTime dt = new DateTime(2023, 03, 25, 11, 10, 45);
+            Console.WriteLine(dt.ElapsedTime());
 
-            cookies["user"] = "maria";
-            cookies["email"] = "maria@gmail.com";
-            cookies["phone"] = "99712234";
-            cookies["phone"] = "24623456";
-
-            Console.WriteLine(cookies["phone"]);
-            Console.WriteLine(cookies["email"]);
-
-            cookies.Remove("email");
-
-            if(cookies.ContainsKey("email"))
-                Console.WriteLine(cookies["email"]);
-            else
-                Console.WriteLine("There is no 'email' key");
-
-            Console.WriteLine(cookies.Count);
-
-            Console.WriteLine("ALL COOKIES");
-
-            foreach (KeyValuePair<string, string> item in cookies)
-            {
-                Console.WriteLine(item.Key + ": " + item.Value);
-            }
-
-            foreach (var item in cookies)
-            {
-                Console.WriteLine(item.Key + ": " + item.Value);
-            }
-
+            string s1 = "Good Morning dear Students!";
+            Console.WriteLine(s1.Cut(10));
         }
 
     }
 }
+
+//    Dictionary<string, string> cookies = new Dictionary<string, string>();
+
+//    cookies["user"] = "maria";
+//    cookies["email"] = "maria@gmail.com";
+//    cookies["phone"] = "99712234";
+//    cookies["phone"] = "24623456";
+
+//    Console.WriteLine(cookies["phone"]);
+//    Console.WriteLine(cookies["email"]);
+
+//    cookies.Remove("email");
+
+//    if(cookies.ContainsKey("email"))
+//        Console.WriteLine(cookies["email"]);
+//    else
+//        Console.WriteLine("There is no 'email' key");
+
+//    Console.WriteLine(cookies.Count);
+
+//    Console.WriteLine("ALL COOKIES");
+
+//    foreach (KeyValuePair<string, string> item in cookies)
+//    {
+//        Console.WriteLine(item.Key + ": " + item.Value);
+//    }
+
+//    foreach (var item in cookies)
+//    {
+//        Console.WriteLine(item.Key + ": " + item.Value);
+//    }
+
+//}
 
 //HashSet<Product2> a = new HashSet<Product2>();
 
