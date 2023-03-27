@@ -9,31 +9,42 @@ using System.Text.Json.Serialization;
 using Course.Model.Entities;
 using Course.Model.Enums;
 using Course.Devices;
-
+using Course.Services;
 
 namespace Course
 {
-    class Program
+
+    delegate double BinaryNumericOperation(double n1, double n2);
+    class ProgramS
     {
         static void Main(string[] args)
         {
-            List<ProductComparison> list = new List<ProductComparison>();
+            double a = 10;
+            double b = 12;
 
-            list.Add(new ProductComparison("TV", 900.00));
-            list.Add(new ProductComparison("Notebook", 1200.00));
-            list.Add(new ProductComparison("Tablet", 450.00));
+            BinaryNumericOperation op = CalculationServices.Sum;
 
-
-            list.Sort((p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper()));
-
-            foreach (ProductComparison c in list)
-            {
-                Console.WriteLine(c);
-            }
+            double result = op(a, b);
+ 
+            Console.WriteLine(result);
 
         }
     }
 }
+
+//List<ProductComparison> list = new List<ProductComparison>();
+
+//list.Add(new ProductComparison("TV", 900.00));
+//list.Add(new ProductComparison("Notebook", 1200.00));
+//list.Add(new ProductComparison("Tablet", 450.00));
+
+
+//list.Sort((p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper()));
+
+//foreach (ProductComparison c in list)
+//{
+//    Console.WriteLine(c);
+//}
 
 //DateTime dt = new DateTime(2023, 03, 25, 11, 10, 45);
 //Console.WriteLine(dt.ElapsedTime());
