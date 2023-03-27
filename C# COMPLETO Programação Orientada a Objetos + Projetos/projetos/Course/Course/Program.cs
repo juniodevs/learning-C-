@@ -20,18 +20,36 @@ namespace Course
         static void Main(string[] args)
         {
 
-            double a = 10;
-            double b = 12;
+            List<Product3> list = new List<Product3>();
+            list.Add(new Product3("Tv", 900.00));
+            list.Add(new Product3("Mouse", 50.00));
+            list.Add(new Product3("Tablet", 350.50));
+            list.Add(new Product3("HD Case", 80.90));
 
-            BinaryNumericOperation op = CalculationServices.ShowSum;
-            op += CalculationServices.ShowMax;
+            list.RemoveAll(ProductTest);
 
-            op(a, b);
+            foreach (Product3 p in list)
+            {
+               Console.WriteLine(p);
+            }
 
+        }
+
+        public static bool ProductTest(Product3 p)
+        {
+            return p.Price >= 100.0;
         }
     }
 }
 
+
+//double a = 10;
+//double b = 12;
+
+//BinaryNumericOperation op = CalculationServices.ShowSum;
+//op += CalculationServices.ShowMax;
+
+//op(a, b);
 //double a = 10;
 //double b = 12;
 
