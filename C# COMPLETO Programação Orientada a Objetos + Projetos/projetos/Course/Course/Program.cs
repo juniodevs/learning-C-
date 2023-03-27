@@ -17,15 +17,29 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            DateTime dt = new DateTime(2023, 03, 25, 11, 10, 45);
-            Console.WriteLine(dt.ElapsedTime());
+            List<ProductComparison> list = new List<ProductComparison>();
 
-            string s1 = "Good Morning dear Students!";
-            Console.WriteLine(s1.Cut(10));
+            list.Add(new ProductComparison("TV", 900.00));
+            list.Add(new ProductComparison("Notebook", 1200.00));
+            list.Add(new ProductComparison("Tablet", 450.00));
+
+
+            list.Sort((p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper()));
+
+            foreach (ProductComparison c in list)
+            {
+                Console.WriteLine(c);
+            }
+
         }
-
     }
 }
+
+//DateTime dt = new DateTime(2023, 03, 25, 11, 10, 45);
+//Console.WriteLine(dt.ElapsedTime());
+
+//string s1 = "Good Morning dear Students!";
+//Console.WriteLine(s1.Cut(10));
 
 //    Dictionary<string, string> cookies = new Dictionary<string, string>();
 
