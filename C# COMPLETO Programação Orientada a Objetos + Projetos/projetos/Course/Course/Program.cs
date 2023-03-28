@@ -14,33 +14,52 @@ using Course.Services;
 namespace Course
 {
 
-    delegate void BinaryNumericOperation(double n1, double n2);
+
     class Program
     {
         static void Main(string[] args)
         {
-
             List<Product3> list = new List<Product3>();
-            list.Add(new Product3("Tv", 900.00));
+
+            list.Add(new Product3("TV", 900.00));
             list.Add(new Product3("Mouse", 50.00));
             list.Add(new Product3("Tablet", 350.50));
-            list.Add(new Product3("HD Case", 80.90));
+            list.Add(new Product3("TV", 80.90));
 
-            list.RemoveAll(ProductTest);
+            list.ForEach(p => p.Price += p.Price * 0.1);
 
-            foreach (Product3 p in list)
+            foreach(Product3 product in list)
             {
-               Console.WriteLine(p);
+                Console.WriteLine(product);
             }
-
         }
 
-        public static bool ProductTest(Product3 p)
+        static void UpdatePrice(Product3 p)
         {
-            return p.Price >= 100.0;
+            p.Price += p.Price * 0.1;
         }
     }
 }
+
+//delegate void BinaryNumericOperation(double n1, double n2);
+
+//List<Product3> list = new List<Product3>();
+//list.Add(new Product3("Tv", 900.00));
+//list.Add(new Product3("Mouse", 50.00));
+//list.Add(new Product3("Tablet", 350.50));
+//list.Add(new Product3("HD Case", 80.90));
+
+//list.RemoveAll(ProductTest);
+
+//foreach (Product3 p in list)
+//{
+//   Console.WriteLine(p);
+//}
+
+//public static bool ProductTest(Product3 p)
+//{
+//    return p.Price >= 100.0;
+//}
 
 
 //double a = 10;
