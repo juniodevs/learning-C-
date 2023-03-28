@@ -15,28 +15,43 @@ using System.Linq;
 namespace Course
 {
 
-
     class Program
     {
         static void Main(string[] args)
         {
-            List<Product3> list = new List<Product3>();
+            // Specify the data Source
 
-            list.Add(new Product3("TV", 900.00));
-            list.Add(new Product3("Mouse", 50.00));
-            list.Add(new Product3("Tablet", 350.50));
-            list.Add(new Product3("TV", 80.90));
+            int[] numbers = new int[] { 2, 3, 4, 5 };
 
-            List<string> result = list.Select(p => p.Name.ToUpper()).ToList();
+            //define the query expression
 
-            foreach(string s in result)
+            int[] result = numbers
+                .Where(x => x % 2 == 0)
+                .Select(x => x * 10).ToArray();
+
+            // Execute the query
+
+            foreach (int x in result)
             {
-                Console.WriteLine(s);
+                Console.WriteLine(x);
             }
-
         }
     }
 }
+
+//List<Product3> list = new List<Product3>();
+
+//list.Add(new Product3("TV", 900.00));
+//list.Add(new Product3("Mouse", 50.00));
+//list.Add(new Product3("Tablet", 350.50));
+//list.Add(new Product3("TV", 80.90));
+
+//List<string> result = list.Select(p => p.Name.ToUpper()).ToList();
+
+//foreach(string s in result)
+//{
+//    Console.WriteLine(s);
+//}
 
 //list.ForEach(p => p.Price += p.Price * 0.1);
 
