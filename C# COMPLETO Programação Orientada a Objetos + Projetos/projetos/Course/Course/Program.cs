@@ -10,6 +10,7 @@ using Course.Model.Entities;
 using Course.Model.Enums;
 using Course.Devices;
 using Course.Services;
+using System.Linq;
 
 namespace Course
 {
@@ -26,20 +27,27 @@ namespace Course
             list.Add(new Product3("Tablet", 350.50));
             list.Add(new Product3("TV", 80.90));
 
-            list.ForEach(p => p.Price += p.Price * 0.1);
+            List<string> result = list.Select(p => p.Name.ToUpper()).ToList();
 
-            foreach(Product3 product in list)
+            foreach(string s in result)
             {
-                Console.WriteLine(product);
+                Console.WriteLine(s);
             }
-        }
 
-        static void UpdatePrice(Product3 p)
-        {
-            p.Price += p.Price * 0.1;
         }
     }
 }
+
+//list.ForEach(p => p.Price += p.Price * 0.1);
+
+//foreach(Product3 product in list)
+//{
+//    Console.WriteLine(product);
+//}
+//static void UpdatePrice(Product3 p)
+//{
+//    p.Price += p.Price * 0.1;
+//}
 
 //delegate void BinaryNumericOperation(double n1, double n2);
 
