@@ -134,13 +134,6 @@ namespace Program
                 Console.WriteLine();
             }
 
-
-
-
-
-
-
-
         }
     }
 }
